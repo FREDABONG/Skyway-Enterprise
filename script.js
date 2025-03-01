@@ -28,7 +28,7 @@ function showSlides() {
 
     slides[slideIndex - 1].classList.add("active");
 
-    setTimeout(showSlides, 3000); // Change slide every 3 seconds
+    setTimeout(showSlides, 3500); // Change slide every 3.5 seconds
 }
 
 showSlides();
