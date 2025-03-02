@@ -280,6 +280,21 @@ footer a img {
     margin-bottom: 20px;
 }
 
+.Director-container {
+    justify-content: center;
+}
+.About-director h2{
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+.director {
+    width: 100%; /* Ensures items fill their grid space */
+    max-width: 300px; /* Prevents stretching too much */
+    margin: 0 auto; /* Centers items */
+    border: 2px rgb(130, 63, 238) solid;
+    border-radius: 20px;
+}
+
 @media screen and (min-width: 950px) {
     .toggle-button {
         display: none;
