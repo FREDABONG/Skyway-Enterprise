@@ -54,24 +54,6 @@
             padding: 5px;
         }
 
-        .checkbox-group {
-            display: flex;
-            align-items: flex-start;
-            /* Aligns checkbox and text */
-            gap: 10px;
-            /* Adds space between checkbox and text */
-            text-align: left;
-            text-overflow: none;
-            width: 90%;
-        }
-
-        .checkbox-group input[type="checkbox"] {
-            margin-top: 5px;
-            /* Adjust this value if needed */
-            width: 16px;
-            height: 16px;
-        }
-
         .btn {
             background-color: #007bff;
             color: white;
@@ -185,32 +167,32 @@
                     <input type="hidden" name="access_key" value="6cbfcf31-00db-4c9d-a204-f4b0929e0718">
                     <div class="form-group">
                         <label for="first-name">First Name*</label>
-                        <input type="text" id="first-name" required>
+                        <input type="text" id="first-name" name="first-name" required>
                     </div>
 
                     <div class="form-group">
                         <label for="last-name">Last Name*</label>
-                        <input type="text" id="last-name" required>
+                        <input type="text" id="last-name" name="last-name" required>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email*</label>
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
 
                     <div class="form-group">
                         <label for="phone">Phone Number*</label>
-                        <input type="tel" id="phone" required>
+                        <input type="tel" id="phone" name="Phone" required>
                     </div>
 
                     <div class="form-group">
                         <label for="organization">Organization Name</label>
-                        <input type="text" id="organization">
+                        <input type="text" id="organization" name="organization">
                     </div>
 
                     <div class="form-group">
                         <label for="designation">Designation</label>
-                        <input type="text" id="designation">
+                        <input type="text" id="designation" name="designation">
                     </div>
 
                     <div class="form-group">
@@ -230,15 +212,8 @@
 
                     <div class="form-group">
                         <label for="comment">Comment*</label>
-                        <textarea id="comment" required></textarea>
+                        <textarea id="comment" name="query" required></textarea>
                     </div>
-
-                    <div class="form-group checkbox-group">
-                        <input type="checkbox" id="consent" required>
-                        <label for="consent">By clicking on the checkbox, you consent to the use and processing of your
-                            personal data as per the Privacy Policy and to receive marketing/promotional emails.</label>
-                    </div>
-
                     <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
