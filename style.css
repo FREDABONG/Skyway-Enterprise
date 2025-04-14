@@ -1,0 +1,1238 @@
+/* =================================================================
+ * Boilerplate & variables
+ * ================================================================= */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --gradiant:linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    --backcolor:rgb(0, 0, 40);
+    --textcolor:rgb(255, 255, 255);
+    --buttoncolor:linear-gradient(135deg, #7b4397, #dc2430);
+}
+/* =================================================================
+ * Home / Index page section Styles
+ * ================================================================= */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    background-color: var(--backcolor);
+    color: var(--textcolor);
+    display: flex;
+    padding: 10px 20px;
+}
+
+header h1 {
+    cursor: pointer;
+    font-size: 2rem;
+    width: 50%;
+    color: rgb(255, 215, 0);
+}
+
+nav {
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 12px;
+}
+
+nav a {
+    position: relative;
+    cursor: pointer;
+    color: var(--textcolor);
+    font-size: 15px;
+    padding: 8px 13px;
+    transition: color 0.25s;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: black;
+    background-color: var(--textcolor);
+    border-radius: 8px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.introduction {
+    width: 100%;
+    height: 35rem;
+    background-image: url('https://th.bing.com/th/id/R.d473fc908f3b7d496439acbba1e905c7?rik=RC9N0AAl9ZOGkw&riu=http%3a%2f%2feskipaper.com%2fimages%2fmalaysia-4.jpg&ehk=2KWGkFwajOZEjvsq6QLhu7xaF97LhGobqS8u42GI%2b%2b4%3d&risl=&pid=ImgRaw&r=0');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 12px 7vw;
+    position: relative;
+}
+
+.introduction::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 40, 0.7), rgba(0, 0, 40, 0.3), transparent);
+    z-index: 1;
+    /* Ensures gradient is on top of the background image */
+}
+
+#animationContainer {
+    position: relative;
+    height: 4.3vh;
+    /* Adjust based on your needs */
+    z-index: 1;
+}
+
+#animationContainer h1 {
+    position: absolute;
+    font-family: monospace;
+    color: var(--textcolor);
+    text-shadow: 3px 3px 3px black;
+    white-space: nowrap;
+    opacity: 1;
+    text-align: left;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.introdution-container2 p {
+    position: relative;
+    text-shadow: 3px 3px 3px black;
+    z-index: 2;
+    /* Keeps text above the gradient */
+    color: var(--textcolor);
+    width: 70%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.aboutus {
+    padding: 12px 10vw;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 40);
+    color: var(--textcolor);
+}
+
+.aboutus-container {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0;
+}
+
+.aboutus-subcontainer1 {
+    padding: 12px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 2px;
+    line-height: 25px;
+    justify-content: center;
+}
+
+.aboutus-subcontainer1 h1 {
+    margin-bottom: 4vh;
+}
+
+.button {
+    width: fit-content;
+    margin: 3vh 1vw;
+    background: var(--buttoncolor);
+    padding: 10px 20px;
+    color: var(--textcolor);
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background: var(--buttoncolor);
+    /* Slight gradient shift */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    /* Softer var(--textcolor) glow */
+    transform: scale(1.03);
+    /* Slight zoom-in */
+}
+
+.button:active {
+    transform: scale(0.97);
+    /* Click effect */
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+    /* Even softer glow when clicked */
+}
+
+.aboutus-subcontainer2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+.aboutus-subcontainer2 img {
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.service, .leader {
+    padding: 12px 7vw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.slideshow-container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-top: 11px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.slide {
+    width: 20vw;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--gradiant);
+}
+
+.slide_content {
+    width: 100%;
+    height: 22vw;
+    display: flex;
+    background: rgb(5, 6, 45);
+    border-radius: 17px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--textcolor);
+    font-weight: bold;
+}
+
+.slide_content img {
+    width: 18vw;
+    height: 18vw;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255);
+    margin: 5px 0 5px 0;
+}
+
+.whyus {
+    gap: 20px;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    background-color: var(--backcolor);
+    padding: 2rem 7vw;
+}
+
+.whyus-container1 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whyus-container1 img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.whyus-container2 {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--textcolor);
+}
+
+.whyus-container2 p {
+    width: 90%;
+    color: var(--textcolor);
+    letter-spacing: 2px;
+    text-align: justify;
+}
+
+.project h1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 0 4vw;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem 0 0 2vw;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: var(--textcolor);
+    text-align: center;
+    display: flex;
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.project-slider {
+    margin: 25px;
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+}
+
+.project-slider .list {
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+
+.project-slider .list .item {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1) - 10s) !important;
+}
+
+.project-slider .list .item img {
+    width: 100%;
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
+
+.project-slider:hover .item {
+    animation-play-state: paused !important;
+    filter: grayscale(1);
+}
+
+.project-slider .item:hover {
+    filter: grayscale(0);
+}
+
+.project-slider[reverse="true"] .item {
+    animation: reversePlay 10s linear infinite;
+}
+
+@keyframes reversePlay {
+    from {
+        left: calc(var(--width) * -1);
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+footer {
+    background-color: var(--backcolor);
+    color: var(--textcolor);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    margin: 8px 15px;
+    font-weight: bold;
+}
+
+footer a img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-info {
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Soft var(--textcolor) border */
+    padding: 15px;
+    color: var(--textcolor);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+/* =================================================================
+ * About US page section Styles
+ * ================================================================= */
+
+.aboutus-entry {
+    width: 100%;
+    height: 30rem;
+    background-image: url('https://cdn-images-1.medium.com/max/2000/1*1x8Njt9B8ldzeZ7BTaOdOQ.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 2rem 15vw;
+    position: relative;
+}
+
+.aboutus-entry::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 40, 0.7), rgba(0, 0, 40, 0.3), transparent);
+    z-index: 1;
+    /* Ensures gradient is on top of the background image */
+}
+
+.aboutus-entry h1 {
+    margin: 0;
+    color: var(--textcolor);
+    font-size: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-decoration: underline;
+    text-shadow: black 3px 2px 3px;
+    display: flex;
+    margin-bottom: 13vh;
+    z-index: 2;
+}
+
+.aboutus-entry article {
+    margin: 0;
+    color: var(--textcolor);
+    text-align: center;
+    z-index: 2;
+}
+.background {
+    background: linear-gradient(180deg, #1a1a2e, #16213e, #0f3460, rgb(0,0,40));
+    padding: 0 220px;
+}
+.mission, .customer-satisfaction, .innovation, .Commitment, .safety,.Sustainability, .innovation {
+    padding: 12px 10vw;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    color: var(--textcolor);
+}
+.mission h1, .customer-satisfaction h1, .Commitment h1, .safety h1, .Sustainability h1, .innovation h1{
+    margin-bottom: 1vh;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.mission-text article {
+    text-align: justify;
+    margin-bottom: 1.5vh;
+    padding: 0 3vw;
+    color: var(--textcolor);
+}
+.custom-style{
+    display: flex;
+    margin: 0 3vw;
+}
+.customer-content, .safety-content, .innovation-content, .Sustainability-content, .Commitment-content {
+    background-image: var(--gradiant);
+    width: 800px;
+    border-radius: 17px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5px 5px;
+    color: var(--textcolor);
+}
+
+.customer-subcontent, .safety-subcontent, .innovation-subcontent, .Sustainability-subcontent, .Commitment-subcontent {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    border-radius: 13px;
+    padding: 10px 10px 0 10px;
+    background-color: var(--backcolor);
+}
+
+.customer-subcontent p, .safety-subcontent p, .innovation-subcontent p, .Sustainability-subcontent p, .Commitment-subcontent p  {
+    text-align: justify;
+    margin-bottom: 1.5vh;
+    padding: 0 25px;
+    color: var(--textcolor);
+}
+
+.leader {
+    padding: 12px 10vw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.leader h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1vh;
+    color: var(--textcolor);
+}
+
+.leader-content {
+    display: flex;
+    padding: 0 3vw;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.leader-content p {
+    color: var(--textcolor);
+}
+
+.leader-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    border-radius: 17px;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: bold;
+    margin: 1vh 4vw;
+}
+
+.leader-box{
+    background-image: var(--gradiant);
+    width: 13.5rem;
+    height: 19.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--textcolor);
+    border-radius: 17px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    margin: 10px 0px;
+}
+
+.leader-subbox{
+    width: 13rem;
+    height: 19rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--textcolor);
+    background-color: var(--backcolor);
+    border-radius: 14px;
+}
+
+.leader-container img {
+    width: 12rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--textcolor);
+    margin: 5px 0 5px 0;
+}
+
+.safety, .Sustainability {
+    padding: 12px 10vw;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =================================================================
+ * Contactus US page section Styles
+ * ================================================================= */
+
+ .Contactus-entry {
+    width: 100%;
+    height: 30rem;
+    background-image: url('https://th.bing.com/th/id/R.d473fc908f3b7d496439acbba1e905c7?rik=RC9N0AAl9ZOGkw&riu=http%3a%2f%2feskipaper.com%2fimages%2fmalaysia-4.jpg&ehk=2KWGkFwajOZEjvsq6QLhu7xaF97LhGobqS8u42GI%2b%2b4%3d&risl=&pid=ImgRaw&r=0');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 2rem 15vw;
+    position: relative;
+}
+
+.Contactus-entry::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 40, 0.7), rgba(0, 0, 40, 0.3), transparent);
+    z-index: 1;
+    /* Ensures gradient is on top of the background image */
+}
+
+.Contactus-entry h1 {
+    margin: 0;
+    color: var(--textcolor);
+    font-size: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-decoration: underline;
+    text-shadow: black 3px 2px 3px;
+    display: flex;
+    margin-bottom: 1vh;
+    z-index: 2;
+}
+
+.Contactus-entry article {
+    margin: 0;
+    color: var(--textcolor);
+    text-align: center;
+    z-index: 2;
+    margin-bottom: 17vh;
+    text-shadow: black 3px 2px 3px;
+}
+
+.contact-section {
+    margin-left: 7.5vw;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    color: var(--textcolor);
+}
+
+.contactus-start h1 {
+    text-align: left;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.contactus-start article {
+    text-align: justify;
+    padding: 5px 20px;
+}
+
+.contactus-form h1 {
+    margin: 1rem .5rem;
+    font-size: 40px;
+    text-align: center;
+}
+
+.contactform {
+    width: 80%;
+    margin-left: 6.5vw;
+    background: var(--gradiant);
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.contactform form {
+    background: rgb(0,0,40);
+    border-radius: 11px;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    width: 80%;
+    margin-left: 6vw;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.btn {
+    background-color: #007bff;
+    color: var(--textcolor);
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0;
+    width: 80%;
+    margin-left: 6vw;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.contact-info-container {
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+}
+
+.Address{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    width: 48%;
+}
+
+.Address h3 {
+    text-align: left;
+    margin: 5px 0;
+    font-size: 30px;
+}
+
+.location{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    width: 40%;
+}
+
+.location h3 {
+    text-align: left;
+    margin: 5px 0;
+    font-size: 30px;
+}
+
+.location iframe {
+    border-radius: 15px;
+}
+
+/* =================================================================
+ * Responsive for mobile as per s20 ultra 950px
+ * ================================================================= */
+
+@media only screen and (max-width: 750px){
+/* =================================================================
+ * Home / Index page section Styles
+ * ================================================================= */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+}
+
+header h1 {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+nav {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a {
+    position: relative;
+    cursor: pointer;
+    color: var(--textcolor);
+    font-size: 15px;
+    transition: color 0.25s;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.introduction {
+    width: 100%;
+    height: 17rem;
+    justify-content: end;
+    padding: 6px 6px;
+    position: relative;
+}
+
+.introduction::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 40, 0.7), rgba(0, 0, 40, 0.3), transparent);
+    z-index: 1;
+    /* Ensures gradient is on top of the background image */
+}
+
+#animationContainer {
+    position: relative;
+    height: 2.5vh;
+    /* Adjust based on your needs */
+    z-index: 1;
+}
+
+#animationContainer h1 {
+    position: absolute;
+    font-family: monospace;
+    color: var(--textcolor);
+    text-shadow: 3px 3px 3px black;
+    white-space: nowrap;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.introdution-container2 p {
+    position: relative;
+    text-shadow: 3px 3px 3px black;
+    z-index: 2;
+    /* Keeps text above the gradient */
+    color: var(--textcolor);
+    width: 100%;
+    font-size: 13px;
+}
+
+.aboutus {
+    padding: 2px 1vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutus-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+}
+
+.aboutus-subcontainer1 {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.aboutus-subcontainer1 h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1vh;
+}
+
+.button {
+    margin: 1vh .5vw;
+    padding: 10px 20px;
+}
+
+.aboutus-subcontainer2 {
+    width: 100%;
+}
+
+.service, .leader {
+    padding: 2px 2vw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.slideshow-container{
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.slide {
+    width: 100%;
+    padding: 5px;
+    background-image: var(--gradiant);
+    margin-bottom: 10px;
+}
+
+.slide_content {
+    width: 100%;
+    height: fit-content;
+}
+
+.slide_content img {
+    width: 95%;
+    height: 80%;
+}
+
+.whyus {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2vw;
+}
+
+.whyus-container1 {
+    width: 100%;
+}
+
+.whyus-container2 {
+    width: 100%;
+}
+
+.project h1 {
+    padding: 0 0 0 2vw;
+}
+
+.project {
+    padding: 0.5rem 0 0 1vw;
+}
+
+/* =================================================================
+ * About US page section Styles
+ * ================================================================= */
+
+.aboutus-entry {
+    width: 100%;
+    height: 15rem;
+    padding: 1rem 2vw;
+    position: relative;
+}
+
+.aboutus-entry h1 {
+    font-size: 2.5rem;
+    margin-bottom: 3vh;
+}
+
+.aboutus-entry article {
+    font-size: 15px;
+}
+.background {
+    padding: 0 5px;
+}
+.mission, .customer-satisfaction, .innovation, .Commitment, .safety,.Sustainability, .innovation {
+    padding: 12px 2vw;
+}
+.mission h1, .customer-satisfaction h1, .Commitment h1, .safety h1, .Sustainability h1, .innovation h1{
+    margin-bottom: 1vh;
+    font-size: 25px;
+}
+
+.mission-text article {
+    font-size: 16px;
+}
+.custom-style{
+    flex-direction: column;
+    margin: 0 1vw;
+}
+.customer-content, .safety-content, .innovation-content, .Sustainability-content, .Commitment-content {
+    flex-direction: column;
+}
+
+.leader {
+    padding: 2px 2vw;
+}
+
+.leader h1 {
+    font-size: 2rem;
+    margin-bottom: 1vh;
+}
+
+.leader-content {
+    padding: 0 1vw;
+}
+
+.leader-content p {
+    color: var(--textcolor);
+}
+
+.leader-container {
+    flex-direction: column;
+}
+
+/* =================================================================
+ * Contactus US page section Styles
+ * ================================================================= */
+
+ .Contactus-entry {
+    height: 15rem;
+    padding: 1rem 5vw;
+}
+
+.Contactus-entry h1 {
+    font-size: 2.5rem;
+}
+
+.Contactus-entry article {
+    margin-bottom: 3vh;
+}
+
+.contact-section {
+    margin-left: 0;
+    width: 100%;
+}
+
+.contactus-start article {
+    text-align: justify;
+    padding: 5px 10px;
+}
+
+.contactus-form h1 {
+    font-size: 35px;
+}
+
+.contactform {
+    width: 85%;
+}
+
+.contactform form {
+    padding: 1rem 0;
+}
+
+.contact-info-container {
+    margin: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.Address{
+    width: 100%;
+}
+
+.location{
+    width: 85%;
+}
+
+.location iframe {
+    border-radius: 15px;
+}
+
+}
+
+
+/* =================================================================
+ * Responsive design for hubs 1500px
+ * ================================================================= */
+
+@media only screen and (max-width: 1500px) {
+/* =================================================================
+ * Home / Index page section Styles
+ * ================================================================= */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.introduction {
+    width: 100%;
+    height: 20rem;
+    justify-content: end;
+    padding: 6px 6px;
+    position: relative;
+}
+
+#animationContainer {
+    height: 5vh;
+}
+
+.introdution-container2 p {
+    width: 70%;
+}
+
+.aboutus {
+    padding: 5px 1vw;
+}
+
+.aboutus-container {
+    padding: 5px 0;
+}
+
+.aboutus-subcontainer1 {
+    padding: 5px;
+    width: 100%;
+}
+.aboutus-subcontainer1 h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2vh;
+}
+
+.button {
+    margin: 1.5vh .5vw;
+    padding: 10px 20px;
+}
+
+.aboutus-subcontainer2 {
+    width: 100%;
+}
+
+.service, .leader {
+    padding: 2px 2vw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.whyus {
+    padding: 1rem 2vw;
+}
+
+.whyus-container1 {
+    width: 100%;
+}
+
+.whyus-container2 {
+    width: 100%;
+}
+
+.project h1 {
+    padding: 0 0 0 2vw;
+    font-size: 2.5rem;
+}
+
+.project {
+    padding: 1rem 0 0 3vw;
+}
+
+/* =================================================================
+ * About US page section Styles
+ * ================================================================= */
+
+.aboutus-entry {
+    width: 100%;
+    height: 20rem;
+    padding: 3rem 10vw;
+}
+
+.aboutus-entry h1 {
+    font-size: 3rem;
+    margin-bottom: 3vh;
+}
+
+.aboutus-entry article {
+    font-size: 20px;
+}
+.background {
+    padding: 0 10px;
+}
+.mission, .customer-satisfaction, .innovation, .Commitment, .safety,.Sustainability, .innovation {
+    padding: 12px 5vw;
+}
+.mission h1, .customer-satisfaction h1, .Commitment h1, .safety h1, .Sustainability h1, .innovation h1{
+    margin: 1.5vh 0;
+    font-size: 30px;
+}
+
+.mission-text article {
+    font-size: 22px;
+}
+.custom-style{
+    flex-direction: column;
+    margin: 0 5vw;
+}
+
+
+/* =================================================================
+ * Contactus US page section Styles
+ * ================================================================= */
+
+ .Contactus-entry {
+    height: 21rem;
+    padding: 6rem 5vw;
+}
+
+.Contactus-entry h1 {
+    font-size: 2.5rem;
+}
+
+.contactus-form h1 {
+    font-size: 40px;
+}
+
+.contactform {
+    width: 85%;
+}
+
+.contactform form {
+    padding: 1.5rem 0;
+}
+
+.contact-info-container {
+    margin: 1rem 1rem;
+    display: flex;
+}
+
+.Address{
+    width: 45%;
+}
+.location{
+    width: 55%;
+}
+
+.location iframe {
+    border-radius: 15px;
+}
+
+}
